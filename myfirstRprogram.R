@@ -29,3 +29,15 @@ cbind(v, w) # v is first col and w is second
 rbind(v, w) # v is first row and w is second
 s <- list(2, "name", TRUE, 1 + 2i)   # list can contain differentclasses but vector can never
 s
+f <- factor(c('Pujab','kpk','kpk','sindh','punjab'))
+f
+unclass(f)
+table(f)
+g <- factor(c('Mon','Tue','wed','Thr','Fri','Str','Sun'))
+g
+unclass(g)
+g <- factor(c('Mon','Tue','wed','Thr','Fri','Str','Sun'), levels = c('Mon','Sun'))
+g
+h <- c(1, 2, 3, NA, NaN, 4, NaN)
+is.na(h)
+is.nan(h)
