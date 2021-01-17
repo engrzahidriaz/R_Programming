@@ -23,3 +23,9 @@ l <- matrix(nrow = 2, ncol = 3)
 l
 l <- matrix(1:6, nrow = 2, ncol = 3)
 l
+v <- 1:3
+w <- 10:12
+cbind(v, w) # v is first col and w is second
+rbind(v, w) # v is first row and w is second
+s <- list(2, "name", TRUE, 1 + 2i)   # list can contain differentclasses but vector can never
+s
