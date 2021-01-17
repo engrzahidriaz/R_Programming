@@ -41,3 +41,19 @@ g
 h <- c(1, 2, 3, NA, NaN, 4, NaN)
 is.na(h)
 is.nan(h)
+k <- data.frame(day = 1:4, rain = c(T, T, F, F))
+k
+nrow(k)
+ncol(k)
+p <- 1:3
+p
+names(p)
+names(p) <- c('col_A', 'col_B', 'col_C' ) 
+p
+names(p)
+r <- list(a=1, b=2, c=3)
+r
+t <- list(a=1:5, b='ID', c=c('fname','lname'))
+t
+t$c
+t$a
