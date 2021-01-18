@@ -127,3 +127,19 @@ c <- list(a = list(10, 12, 14), b = c(3.14, 2.81))
 c[[c(1,3)]]
 c[[1]][[3]]
 c[[c(2,1)]]
+
+# ----------------- Removing NA Values -------------------
+
+x <- c(1, 2, 4, NA, 6, NA)
+x
+is.na(x)
+bad <- is.na(x)
+bad
+!bad
+x[!bad]
+x <- c(1, 2, NA, 6, NA, 7)
+y <- c('a','b', NA,'d',NA,'f')
+good <- complete.cases(x,y)
+good
+x[good]
+y[good]
