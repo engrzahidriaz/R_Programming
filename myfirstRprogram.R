@@ -234,11 +234,6 @@ function (formula, data, subset, weights,
             TRUE, contrasts = NULL, offset,
           ...)
 
-mydata <- data.frame(x=rnorm(100), 
-                       y=rnorm(100))
-lm(y ~ x, mydata, model = FALSE)
-lm(data=mydata, y~x, model = FALSE, 1:100)
-
 f <- function(a, b) { 
   a^2
 } 
