@@ -235,8 +235,3 @@ function (formula, data, subset, weights,
           ...)
 
 
-f <- function(a, b)
-{ print(a)
-  print(b)
-} 
-f(45)
