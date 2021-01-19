@@ -1,5 +1,4 @@
 
-
 #----------- Data Types and Basic Operations -------------
 # ------------ Objects ----------
 
@@ -171,7 +170,7 @@ y <- if (x > 3) {
   0
 }
 
- # for loop
+# for loop
 for (i in 1:4){
   print(i)
 }
@@ -218,14 +217,13 @@ while(z >= 3 && z <= 10) {
   }
 }
 
-# ------------------ Function ------------------
+# ----------------------- Functions -------------------
 
 mydata <- rnorm(100)
-mydata
 sd(mydata)
-sd( x= mydata)
-sd(x= mydata, na.rm = FALSE)
-sd(na.rm = FALSE, x=mydata)
+sd(x = mydata)
+sd(x = mydata, na.rm = FALSE)
+sd(na.rm = FALSE, x = mydata)
 sd(na.rm = FALSE, mydata)
 
 args(lm)
@@ -236,18 +234,15 @@ function (formula, data, subset, weights,
             TRUE, contrasts = NULL, offset,
           ...)
 
-f <- function(a, b =1, c=2, d= NULL){
-  
-}
-f(a)
-f(c)
-f(d)
+mydata <- data.frame(x=rnorm(100), 
+                       y=rnorm(100))
+lm(y ~ x, mydata, model = FALSE)
+lm(data=mydata, y~x, model = FALSE, 1:100)
 
 f <- function(a, b) { 
   a^2
 } 
 f(2)
-f(4)
 
 f <- function(a, b)
 { print(a)
