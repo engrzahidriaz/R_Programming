@@ -217,3 +217,40 @@ while(z >= 3 && z <= 10) {
     z <- z - 1
   }
 }
+
+# ------------------ Function ------------------
+
+mydata <- rnorm(100)
+mydata
+sd(mydata)
+sd( x= mydata)
+sd(x= mydata, na.rm = FALSE)
+sd(na.rm = FALSE, x=mydata)
+sd(na.rm = FALSE, mydata)
+
+args(lm)
+function (formula, data, subset, weights,
+          na.action, method = "qr", model =
+            TRUE, x = FALSE,
+          y = FALSE, qr = TRUE, singular.ok =
+            TRUE, contrasts = NULL, offset,
+          ...)
+
+f <- function(a, b =1, c=2, d= NULL){
+  
+}
+f(a)
+f(c)
+f(d)
+
+f <- function(a, b) { 
+  a^2
+} 
+f(2)
+f(4)
+
+f <- function(a, b)
+{ print(a)
+  print(b)
+} 
+f(45)
