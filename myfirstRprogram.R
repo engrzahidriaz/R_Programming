@@ -234,10 +234,6 @@ function (formula, data, subset, weights,
             TRUE, contrasts = NULL, offset,
           ...)
 
-f <- function(a, b) { 
-  a^2
-} 
-f(2)
 
 f <- function(a, b)
 { print(a)
