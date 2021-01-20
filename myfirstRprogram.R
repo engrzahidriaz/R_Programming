@@ -218,3 +218,59 @@ while(z >= 3 && z <= 10) {
   }
 }
 
+# ---------------------- Functions ---------------------------
+
+mydata <- rnorm(100)
+mydata
+sd(mydata)
+sd(x = mydata)
+sd(x = mydata, na.rm = FALSE)
+sd(na.rm = FALSE, x = mydata)
+sd(na.rm = FALSE, mydata)
+
+args(lm)
+
+mydata <- data.frame(x=rnorm(100), 
+                     y=rnorm(100))
+lm(y ~ x, mydata, model = FALSE)
+
+lm(data=mydata, y~x, model = FALSE, 1:100)
+
+f <- function(a, b = 1, c = 2, d = NULL) {
+}  
+f(a)
+f(c)
+
+f <- function(a, b) {
+  a^2
+} 
+f(2)
+f(4)
+f(2,)
+
+f <- function(a, b){ 
+  print(a)
+  print(b)
+} 
+f(45)
+f(45,)
+f(,45)
+
+#------------------------ Vectorized Operation -------------------
+
+x <- 1:4; y <- 6:9
+x
+y
+x + y
+x > 2
+x >= 2
+y == 8
+x * y
+x / y
+
+x <- matrix(1:4, 2, 2); y <- matrix(rep(10, 4), 2, 2)
+x
+y
+x * y
+x / y
+x %*% y    # true matrix Multiplication
