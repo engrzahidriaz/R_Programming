@@ -233,5 +233,3 @@ function (formula, data, subset, weights,
           y = FALSE, qr = TRUE, singular.ok =
             TRUE, contrasts = NULL, offset,
           ...)
-
-
