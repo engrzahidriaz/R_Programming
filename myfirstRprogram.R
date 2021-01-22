@@ -316,3 +316,57 @@ x <- as.POSIXct("2012-10-25 01:00:00")
 y <- as.POSIXct("2012-10-25 06:00:00", tz = "GMT")
 y-x
 x
+
+#------------------------ Loop Function -------------------
+
+# lapply
+x <- list(a = 1:5, b = rnorm(10))
+x
+class(x)
+lapply(x, mean)
+mean(x$a)
+
+x <- list(a = 1:4, b = rnorm(10), c = rnorm(20, 1),
+          d = rnorm(100, 5))
+x
+lapply(x, mean)
+lapply(x, sd)
+lapply(x, sum)
+
+?runif
+x <- 1:4
+runif(1)
+runif(2)
+lapply(x, runif)
+lapply(x, runif, min=0, max=10)
+lapply(x, runif, min=50, max=100)
+
+# sapply
+x <- list(a = 1:4, b = rnorm(10), c = rnorm(20, 1), d = rnorm(100, 5))
+x
+lapply(x, mean)
+sapply(x, mean)
+sapply(x, sd)
+mean(x)
+
+# apply
+x <- matrix(rnorm(50), 5, 10)
+apply(x, 2, mean)                     # for Col
+apply(x, 1, mean)                     # for row
+
+rowSums(x)
+rowMeans(x)
+colSums(x)
+colMeans(x)
+
+?quantile
+apply(x, 1, quantile)
+apply(x, 1, quantile, probs = c(0.25, 0.75))
+
+?gl
+x <- c(rnorm(10), runif(10), rnorm(10, 1))
+f <- gl(3, 10)
+f
+tapply(x, f, mean)
+tapply(x, f, mean, simplify = FALSE)
+tapply(x, f, range)
